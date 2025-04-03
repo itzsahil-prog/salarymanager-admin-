@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Management System</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="login" href="login3.html">
+</head>
+<body>
+    <section>
+        <div>
+            <h1>SALARYMATE</h1>
+            <p>"A Smart and Efficient System"</p>
+        </div>
+    </section>
+<section>
+    <div id="employees" class="container hidden">
+        <h2>Employee Management</h2>
+        <form id="employeeForm">
+            <label>Name:</label>
+            <br>
+            <input type="text" id="name" required>
+            <br>
+            <label>Employee ID:</label>
+            <br>
+            <input type="number" id="id" required>
+            <br>
+            <label>Position:</label>
+            <br>
+            <input type="text" id="position" required>
+            <br>
+            <label>Date of Joining:</label>
+            <br>
+            <input type="date" id="doj" required>
+            <br>
+            <label>Status:</label>
+            <br>
+            <select id="status" required>
+                <option value="Permanent">Permanent</option>
+                <option value="Intern">Intern</option>
+                <option value="Contract">Contract-based</option>
+                <option value="Resigned">Resigned</option>
+            </select>
+            <br>
+            <button type="submit">Add Employee</button>
+        </form>
+    </div>
+</section>
+<section>
+    <div  table id="employeeTable">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Position</th>
+                    <th>Date of Joining</th>
+                    <th>Status</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="employees.js"></script>
+</section>
+<section>
+    <div class="container">
+        <h1>Salary Details</h1>
+        <div class="form-container">
+            <label for="empName">Employee Name:</label>
+            <input type="text" id="empName" placeholder="Enter Name">
+            <br>
+            <label for="empID">Employee ID:</label>
+            <input type="text" id="empID" placeholder="Enter ID">
+            <br>
+            <label for="basicSalary">Basic Salary ($):</label>
+            <input type="number" id="basicSalary" placeholder="Enter Salary">
+            <br>
+            <button onclick="calculateSalary()">Calculate Salary</button>
+        </div>
+    </div>
+</section>
+<section>
+    <div>
+        <h2>Salary Details</h2>
+        <center>
+            <table>
+                <tbody id="salaryTable">
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Name</th><th>Basic Salary ($)</th>
+                            <th>Allowance (20%)</th>
+                            <th>Tax Deduction (10%)</th>
+                            <th>Net Salary ($)</th>
+                        </tr>
+                    </thead>
+                </tbody>
+            </table>
+        </center>
+    </div>
+</section>
+<section>
+    <div class="form-container">
+        <h2>Employee Leave</h2>
+        <form id="leaveForm">
+            <input type="text" id="leaveEmployeeName" placeholder="Employee Name" required>
+            <br>
+            <input type="text" id="leaveEmployeeID" placeholder="Employee ID" required>
+            <br>
+            <center><h6>From</h6></center>
+            <input type="date" id="leaveDate" placeholder="Leave Date" required>
+            <br>
+            <center><h6>To</h6></center>
+            <input type="date" id="leaveDate" placeholder="Leave Date" required>
+            <br>
+            <input type="text" id="leaveEmployeereason" placeholder="Reason" required>
+            <br>
+            <button type="button" onclick="AddLeave()">Add Leave</button>
+        </form>
+    </div>
+</section>
+<section>
+    <div>
+        <table>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Reason</th>
+                </tr>
+            <tbody id="employeeTable">
+            </tbody>
+        </table>
+     </div>
+</section>
+<section>
+    <div class="container">
+        <h2>Add Attendance</h2>
+        <form><id="attendanceForm">
+            <input type="number" id="empid" placeholder="Employee ID" required>
+            <input type="text" id="attendanceEmployeeName" placeholder="Employee Name" required>
+            <input type="date" id="attendanceDate" required>
+            <button type="button" onclick="addAttendence()">Add Attendance</button>
+        </form>
+    </div>
+</section>
+<section>
+    <div>
+        <h2>Employee Self-Service Portal</h2>
+        <input type="text" id="portalEmployeeName" placeholder="Employee Name" required>
+        <button id="viewPortalButton">View Portal</button>
+    </div>
+</section>
+<script src="salarys.js"></script>
+    
+</body>
+</html>
