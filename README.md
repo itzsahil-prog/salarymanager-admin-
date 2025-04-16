@@ -1,8 +1,3 @@
-﻿# salarymanager-admin-
-Based on the information provided about your repository **salarymanager-admin-**, I have drafted a comprehensive `README.md` file. This includes technical details, potential features, and instructions for usage.
-
----
-
 # Salary Manager Admin
 
 **Salary Manager Admin** is a web-based application designed to help organizations manage employee salaries efficiently. With an intuitive interface and robust functionality, this application simplifies administrative tasks related to salary distribution, employee records, and financial reporting.
